@@ -40,6 +40,10 @@ class _StudentAccommodationFormState extends State<StudentAccommodationForm> {
         _resultMessage = "Your username is ${_usernameController.text}. "
             "You $laptopText have Laptop\n"
             "You are a $_selectedCourse student at UCSC";
+            
+        if (_hasAccommodationRequest && _accommodationNeedsController.text.isNotEmpty) {
+          _resultMessage += "\nAccommodation Needs: ${_accommodationNeedsController.text}";
+        }
       });
     }
   }
