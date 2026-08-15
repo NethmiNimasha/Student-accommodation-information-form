@@ -24,14 +24,14 @@ class _StudentAccommodationFormState extends State<StudentAccommodationForm> {
   final _accommodationNeedsController = TextEditingController();
 
   // State variables
-  bool _hasLaptop = true; // Defaulting to Yes
+  bool _hasLaptop = true; 
   String _selectedCourse = 'IS';
   bool _hasAccommodationRequest = false;
   
   String _resultMessage = '';
 
   // Dropdown options
-  final List<String> _courses = ['IS', 'CS', 'SE', 'DS'];
+  final List<String> _courses = ['IS', 'CS'];
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
@@ -105,7 +105,7 @@ class _StudentAccommodationFormState extends State<StudentAccommodationForm> {
               // Password Field
               TextFormField(
                 controller: _passwordController,
-                obscureText: true, // Obscure text requirement
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   hintText: 'Password',
